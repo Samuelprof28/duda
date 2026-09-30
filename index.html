@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coisas que Eu Curto · Blog da Duda</title>
+
+  <!-- Fontes do Google: Fraunces (títulos) e DM Sans (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== CABEÇALHO ========== -->
+  <header class="cabecalho">
+    <a href="#inicio" class="logo">
+      <span class="logo-estrela">✦</span>
+      coisas que eu curto
+    </a>
+
+    <nav class="menu" id="menu">
+      <a href="#posts">Posts</a>
+      <a href="#sobre">Sobre mim</a>
+      <a href="#agora">Agora</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="cabecalho-acoes">
+      <button class="btn-redondo" id="btn-tema" title="Mudar tema" aria-label="Mudar tema">🌙</button>
+      <button class="btn-redondo btn-menu" id="btn-menu" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== APRESENTAÇÃO ========== -->
+    <section class="hero" id="inicio">
+      <div class="hero-texto">
+        <p class="etiqueta" id="saudacao">✏️ blog pessoal desde 2026</p>
+        <h1>
+          Oi! Eu sou a Duda e aqui eu escrevo sobre
+          <span class="grifado">tudo que eu curto</span>.
+        </h1>
+        <p class="hero-descricao">
+          Games, músicas, séries, códigos e umas receitas duvidosas.
+          Um cantinho da internet feito com HTML, CSS, JavaScript e muito café.
+        </p>
+        <a href="#posts" class="btn-principal">Ler os posts ↓</a>
+      </div>
+
+      <div class="hero-colagem" aria-hidden="true">
+        <div class="adesivo adesivo-1">🎮</div>
+        <div class="adesivo adesivo-2">🎧</div>
+        <div class="adesivo adesivo-3">💻</div>
+        <div class="adesivo adesivo-4">🍜</div>
+        <div class="adesivo adesivo-5">📚</div>
+      </div>
+    </section>
+
+    <!-- ========== POST EM DESTAQUE ========== -->
+    <section class="secao">
+      <h2 class="titulo-secao">Em destaque</h2>
+      <article class="destaque" id="post-destaque"></article>
+    </section>
+
+    <!-- ========== LISTA DE POSTS ========== -->
+    <section class="secao" id="posts">
+      <div class="posts-topo">
+        <h2 class="titulo-secao">Todos os posts</h2>
+        <label class="busca">
+          🔍
+          <input type="search" id="input-busca" placeholder="Buscar post...">
+        </label>
+      </div>
+
+      <div class="filtros" id="filtros"></div>
+
+      <div class="grade-posts" id="grade-posts">
+      </div>
+      <p class="sem-resultado" id="sem-resultado" hidden>Nenhum post encontrado 😢</p>
+    </section>
+
+    <!-- ========== SOBRE MIM ========== -->
+    <section class="secao sobre" id="sobre">
+      <div class="sobre-foto">
+        <span>🧑🏽‍💻</span>
+      </div>
+      <div class="sobre-texto">
+        <h2 class="titulo-secao">Sobre mim</h2>
+        <p>
+          Tenho 17 anos, estudo Desenvolvimento de Sistemas e passo tempo demais
+          pensando em qual vai ser o próximo jogo, a próxima série e o próximo projeto.
+        </p>
+        <p>
+          Criei este blog para guardar as coisas que me fazem feliz e, de quebra,
+          treinar tudo que aprendo nas aulas. Se você chegou até aqui: seja bem-vindo(a)!
+        </p>
+        <ul class="curiosidades">
+          <li>☕ Movida a café</li>
+          <li>🐱 Tutora de 2 gatos</li>
+          <li>🎸 Tentando aprender violão</li>
+          <li>🌙 Fã de modo escuro</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== AGORA ESTOU... ========== -->
+    <section class="secao" id="agora">
+      <h2 class="titulo-secao">Agora estou...</h2>
+      <div class="grade-agora">
+        <div class="cartao-agora cor-rosa">
+          <span class="agora-icone">🎧</span>
+          <p class="agora-rotulo">Ouvindo</p>
+          <p class="agora-item">Lo-fi pra estudar</p>
+        </div>
+        <div class="cartao-agora cor-verde">
+          <span class="agora-icone">🎮</span>
+          <p class="agora-rotulo">Jogando</p>
+          <p class="agora-item">Stardew Valley (de novo)</p>
+        </div>
+        <div class="cartao-agora cor-azul">
+          <span class="agora-icone">📺</span>
+          <p class="agora-rotulo">Assistindo</p>
+          <p class="agora-item">Um anime de vôlei</p>
+        </div>
+        <div class="cartao-agora cor-amarela">
+          <span class="agora-icone">💻</span>
+          <p class="agora-rotulo">Aprendendo</p>
+          <p class="agora-item">JavaScript e DOM</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section class="secao contato" id="contato">
+      <h2>Quer receber os posts novos? 💌</h2>
+      <p>Deixa seu e-mail aqui. Prometo não mandar spam (nem sei fazer isso ainda).</p>
+      <form class="form-contato" id="form-contato">
+        <input type="email" id="input-email" placeholder="seu@email.com" required>
+        <button type="submit" class="btn-principal">Quero!</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer class="rodape">
+    <p>© <span id="ano">2026</span> Duda · Feito com 💜, HTML, CSS e JavaScript · Blog fictício para fins educativos</p>
+    <a href="#inicio" class="voltar-topo">↑ voltar ao topo</a>
+  </footer>
+
+  <!-- ========== LEITURA DO POST (janela) ========== -->
+  <div class="leitura" id="leitura" hidden>
+    <article class="leitura-caixa" role="dialog" aria-modal="true" aria-labelledby="leitura-titulo">
+      <button class="btn-redondo btn-fechar" id="btn-fechar" aria-label="Fechar">✕</button>
+      <div class="leitura-capa" id="leitura-capa"></div>
+      <div class="leitura-conteudo">
+        <p class="post-meta" id="leitura-meta"></p>
+        <h2 id="leitura-titulo"></h2>
+        <div class="leitura-texto" id="leitura-texto"></div>
+        <button class="btn-curtir" id="btn-curtir-leitura"></button>
+      </div>
+    </article>
+  </div>
+
+  <!-- Aviso rápido (aparece e some sozinho) -->
+  <div class="aviso" id="aviso" role="status"></div>
+
+  <!-- Modelo de card de post (o JS clona este modelo para cada post) -->
+  <template id="modelo-card">
+    <article class="card">
+      <div class="card-capa"></div>
+      <div class="card-corpo">
+        <p class="post-meta"></p>
+        <h3 class="card-titulo"></h3>
+        <p class="card-resumo"></p>
+        <div class="card-rodape">
+          <button class="link-ler">Ler post →</button>
+          <button class="btn-curtir"></button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
